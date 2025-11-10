@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>JAS Alimentos</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+ 
+                <!-- Pantalla 1: Tipo de usuario -->
+            <section id="pantalla-tipo" class="pantalla activa">
+                <h2>TIPO DE USUARIO</h2>
+                <button class="boton" onclick="cambiarColor(this)">CLIENTE</button>
+                <button class="boton bloqueado">ADMINISTRADOR</button>
+                <button class="boton bloqueado">OPERARIO</button>
+                <button class="boton bloqueado">SECRETARIA</button>
+                <button class="boton bloqueado">VENDEDOR</button>
+                <button class="boton-principal" onclick="irALogin()">INGRESAR</button>
+                <img src="logo.png" class="logo">
+            </section>
+ 
+                <!-- Pantalla 2: Login -->
+            <section id="pantalla-login" class="pantalla">
+                <h2>BIENVENIDO</h2>
+                <input type="text" placeholder="Nombre" class="input">
+                <input type="password" placeholder="Clave" class="input">
+                <button class="boton-principal" onclick="irACliente()">INICIAR SESIÓN</button>
+                <button class="atras" onclick="volverATipo()">←</button>
+                <img src="logo.png" class="logo">
+            </section>
+ 
+                <!-- Pantalla 3: Cliente -->
+            <section id="pantalla-cliente" class="pantalla">
+                <img src="logo.png" class="logo">
+                <h2>CLIENTE</h2>
+                <button class="boton" onclick="nuevoPedido();">NUEVO PEDIDO</button>
+                <button class="boton">HISTORIAL DE PEDIDOS</button>
+                <button class="boton">ESTADO DE PEDIDO</button>
+                <button class="atras" onclick="volverALogin()">←</button>
+            </section>
+
+                <!-- Pantalla 4: Nuevo Pedido -->
+            <section id="pantalla-nuevo-pedido" class="pantalla">
+                <img src="logo.png" class="logo">
+                <h2>NUEVO PEDIDO</h2>
+                <form class="form-pedido">
+                    <input type="text" class="input" placeholder="Nombre del producto" id="producto">
+                    <input type="number" class="input" placeholder="Cantidad" id="cantidad">
+                    <input type="date" class="input" id="fecha">
+                    <textarea class="input" placeholder="Observaciones (opcional)" id="observaciones"></textarea>
+                </form>
+                <button class="boton-principal" onclick="confirmarPedido()">CONFIRMAR PEDIDO</button>
+                <button class="atras" onclick="volverACliente()">←</button>
+            </section>
+        <script src="script.js"></script>
+        </body>
+</html>
