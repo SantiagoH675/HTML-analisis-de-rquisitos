@@ -23,7 +23,7 @@ function confirmarPedido() {
     }
 
     // Mostramos el mensaje de confirmación
-    alert("✅ Pedido registrado correctamente.\n\nProducto: " + producto + "\nCantidad: " + cantidad + "\nFecha de entrega: " + fecha);
+    alert("✅ Pedido registrado correctamente.\n\nProducto: " + producto + "\nCantidad: " + cantidad + "\nFecha de registro: " + fecha);
 
     // Limpia los campos del formulario
     document.getElementById("producto").value = "";
